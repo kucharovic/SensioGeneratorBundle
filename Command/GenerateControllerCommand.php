@@ -171,7 +171,7 @@ EOT
         $input->setOption('route-format', $routeFormat);
 
         // templating format
-        $validateTemplateFormat = function($format) {
+        $validateTemplateFormat = function ($format) {
             if (!in_array($format, array('twig', 'php'))) {
                 throw new \InvalidArgumentException(sprintf('The template format must be twig or php, "%s" given', $format));
             }
@@ -212,7 +212,7 @@ EOT
             '',
         ));
 
-        $templateNameValidator = function($name) {
+        $templateNameValidator = function ($name) {
             if ('default' == $name) {
                 return $name;
             }
